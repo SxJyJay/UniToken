@@ -1,0 +1,5 @@
+META:
+  # I2T data
+  - path: '/home/meta_data/pretokenization_phase1/records_sharecap_1246k/record.json'
+  - path: '/home/meta_data/pretokenization_phase1/records_llava_detail_cap_559k/record.json'
+  - path: '/home/meta_data/pretokenization_phase1/records_allava_cap_710k/record.json'

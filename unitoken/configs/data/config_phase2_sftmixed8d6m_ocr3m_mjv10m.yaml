@@ -1,0 +1,49 @@
+META:
+  # I2T sft data
+  # data_cap=en_sharecap_100k,zh_sharecap_100k,en_textocr4v_25k,zh_sa1b@cap_100k # 425k
+  - path: '/home/meta_data/lumina_pretokenization/records_en_sharecap_100k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_zh_sharecap_100k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_textocr4v_25k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_sa1bdensecap_100k/record.json'
+    ratio: 1.0
+  # data_chartmath=en_chartqareason_390k,en_ureader_1.1m,en_scigraphqa_296k,en_geo@sft_118k # 1904k
+  - path: '/home/meta_data/lumina_pretokenization/records_chartqareason_390k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_ureader_1.1m/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_scigraphqa_296k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_geo_sft_118k/record.json'
+    ratio: 1.0
+  # data_general=en_llava16_1.5m,en_m3it_920k,en_allava@sft_710k,zh_allava@sft_638k # 3768k
+  - path: '/home/meta_data/lumina_pretokenization_verify/records_llava16_1.5m/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_m3it_920k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_en_allava_sft_710k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_zh_allava_sft_638k/record.json'
+    ratio: 1.0
+  # data_ocr=en_pdfa_3m,zh_mixedocr_600k,en_synthdog@col1_600k,zh_synthdog@col1_600k,en_synthdog@col3_600k,zh_synthdog@col3_600k,en_ureader_1.1m,en_websrc_300k # 7.4/3m 
+  - path: '/home/meta_data/lumina_pretokenization/records_pdfa_3m/record.json'
+    ratio: 0.333  # 3/3m
+  - path: '/home/meta_data/lumina_pretokenization/records_mixedocr_600k/record.json'
+    ratio: 0.333  # 600/3k
+  - path: '/home/meta_data/lumina_pretokenization/records_en_synthdog@col1_200k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_zh_synthdog@col1_200k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_en_synthdog@col3_200k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_zh_synthdog@col3_200k/record.json'
+    ratio: 1.0
+  - path: '/home/meta_data/lumina_pretokenization/records_websrc_100k/record.json'
+    ratio: 1.0
+  # T2I data
+  - path: '/home/meta_data/lumina_pretokenization/records_mjv_10m/record.json'
+    ratio: 1.0
+  
+
