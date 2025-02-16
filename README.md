@@ -48,7 +48,7 @@ See [unitoken/TRAIN.md](unitoken/TRAIN.md)
 >
 > to enter the directory of the Lumina-mGPT implementation. -->
 
-### Perpetration
+### Preparation
 
 Download the original [VQ-VAE weights](https://github.com/facebookresearch/chameleon),  [Lumina-mGPT-512](https://huggingface.co/Alpha-VLLM/Lumina-mGPT-7B-512) and [SigLIP](https://huggingface.co/google/siglip-so400m-patch14-384), and put them to the following directory:
 
