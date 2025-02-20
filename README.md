@@ -20,7 +20,7 @@
 
 </div>
 
-<!-- <img src="assets/demos.png"> -->
+<img src="assets/demo.png">
 
 ## 📣 News
 
