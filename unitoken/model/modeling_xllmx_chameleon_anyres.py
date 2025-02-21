@@ -10,6 +10,7 @@ from torch import nn
 from transformers import AutoProcessor, AutoModel
 
 import sys
+import os
 sys.path.append(os.path.abspath(__file__).rsplit("/", 2)[0])
 from tools import get_anyres_image_grid_shape
 

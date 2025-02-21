@@ -79,12 +79,12 @@ from PIL import Image
 
 # ******************** Image Generation ********************
 inference_solver = FlexARInferenceSolverAnyRes(
-    model_path="OceanJay/UniToken-AnyRes-7B-StageII",
+    model_path="OceanJay/UniToken-AnyRes-StageII",
     precision="bf16",
     target_size=512,
 )
 
-q1 = f"Generate an image according to the following prompt:\n"
+q1 = f"Generate an image according to the following prompt:\n" \
      f"A majestic phoenix with fiery wings soaring above a tranquil mountain lake, casting shimmering reflections on the water. Sparks and embers trail behind it as the sky glows with hues of orange and gold."
 
 # generated: tuple of (generated response, list of generated images)
@@ -101,7 +101,7 @@ a1, new_image = generated[0], generated[1][0]
 
 # ******************* Image Understanding ******************
 inference_solver = FlexARInferenceSolverAnyRes(
-    model_path="OceanJay/UniToken-AnyRes-7B-StageII",
+    model_path="OceanJay/UniToken-AnyRes-StageII",
     precision="bf16",
     target_size=512,
 )
