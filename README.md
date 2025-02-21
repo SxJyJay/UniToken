@@ -77,14 +77,15 @@ The simplest code for UniToken inference:
 from inference_solver_anyres import FlexARInferenceSolverAnyRes
 from PIL import Image
 
-# ******************** Image Generation ********************
 inference_solver = FlexARInferenceSolverAnyRes(
-    model_path="OceanJay/UniToken-AnyRes-7B-StageII",
+    model_path="OceanJay/UniToken-AnyRes-StageII",
     precision="bf16",
     target_size=512,
 )
 
-q1 = f"Generate an image according to the following prompt:\n"
+# ******************** Image Generation ********************
+
+q1 = f"Generate an image according to the following prompt:\n" \
      f"A majestic phoenix with fiery wings soaring above a tranquil mountain lake, casting shimmering reflections on the water. Sparks and embers trail behind it as the sky glows with hues of orange and gold."
 
 # generated: tuple of (generated response, list of generated images)
@@ -97,14 +98,10 @@ generated = inference_solver.generate_img(
 )
 
 a1, new_image = generated[0], generated[1][0]
+new_image.save("generated_image.png")
 
 
 # ******************* Image Understanding ******************
-inference_solver = FlexARInferenceSolverAnyRes(
-    model_path="OceanJay/UniToken-AnyRes-7B-StageII",
-    precision="bf16",
-    target_size=512,
-)
 
 # "<|image|>" symbol will be replaced with sequence of image tokens before fed to LLM
 q1 = "<|image|>Please describe the details of the image as much as possible."
@@ -123,6 +120,7 @@ generated = inference_solver.generate(
 
 a1 = generated[0]
 # generated[1], namely the list of newly generated images, should typically be empty in this case.
+print(a1)
 ```
 
 ## 🤗 Checkpoints
