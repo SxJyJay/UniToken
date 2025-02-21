@@ -7,7 +7,6 @@ from typing import Optional, Tuple, Union
 
 import torch
 from torch import nn
-import ipdb
 from transformers import AutoProcessor, AutoModel
 from transformers.cache_utils import Cache, StaticCache
 from transformers.modeling_outputs import BaseModelOutputWithPast, CausalLMOutputWithPast
@@ -30,7 +29,7 @@ class ChameleonGenForConditionalGenerationBase(ChameleonForConditionalGeneration
         self._init_proj()   # Initialize here to enable "from_pretrained" method to resume pre-saved 'adapter' weights
         self._init_vit()  ## TODO: Check whether pre-saved ckpts include vit params
 
-    def _init_vit(self, vit_root="ckpts/SigLIP"):
+    def _init_vit(self, vit_root="./ckpts/SigLIP"):
         self.vit = AutoModel.from_pretrained(vit_root).vision_model
 
     def _init_proj(self):

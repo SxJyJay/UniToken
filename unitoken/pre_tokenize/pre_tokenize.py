@@ -16,7 +16,7 @@ from data.item_processor import FlexARItemProcessor
 class ItemProcessor(FlexARItemProcessor):
     def __init__(
         self,
-        tokenizer="Alpha-VLLM/Lumina-mGPT-7B-768",
+        tokenizer="OceanJay/UniToken-AnyRes-StageII",
         conv_template=Conversation,
         target_size=512,
     ):

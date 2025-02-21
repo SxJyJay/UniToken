@@ -5,7 +5,6 @@ from typing import List
 
 import torch
 from torch import nn
-import ipdb
 from transformers import AutoProcessor, AutoModel
 
 from .chameleon import ChameleonForConditionalGeneration
@@ -26,7 +25,7 @@ class ChameleonXLLMXForConditionalGenerationBase(ChameleonForConditionalGenerati
         self._init_proj()   # Initialize here to enable "from_pretrained" method to resume pre-saved 'adapter' weights
         self._init_vit()    # Initialize here to enable "from_pretrained" method to resume pre-saved 'vit' weights
 
-    def _init_vit(self, vit_root="ckpts/SigLIP"):
+    def _init_vit(self, vit_root="./ckpts/SigLIP"):
         self.vit = AutoModel.from_pretrained(vit_root).vision_model
 
     def _init_proj(self):

@@ -143,7 +143,6 @@ class Emu3Processor(ProcessorMixin):
 
             image_inputs = self.image_processor(image, return_tensors="pt")["pixel_values"]
             image_inputs = image_inputs.to(self.vision_tokenizer.device, self.vision_tokenizer.dtype)
-            # import ipdb; ipdb.set_trace()
             image_tokens = self.vision_tokenizer.encode(image_inputs)
 
             if len(text) != len(image_tokens):
@@ -177,7 +176,6 @@ class Emu3Processor(ProcessorMixin):
             prompt_list.append(prompt)
             size_list.append([h, w])
 
-        # import ipdb; ipdb.set_trace()
         text_inputs = self.tokenizer(prompt_list, **kwargs)
         return BatchFeature(data={**text_inputs, "image_size": size_list}, tensor_type=kwargs.get("return_tensors"))
 

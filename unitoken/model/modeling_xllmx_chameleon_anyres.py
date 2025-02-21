@@ -7,7 +7,6 @@ from typing import List
 
 import torch
 from torch import nn
-import ipdb
 from transformers import AutoProcessor, AutoModel
 
 import sys
@@ -69,7 +68,7 @@ class ChameleonXLLMXForConditionalGenerationAnyRes(ChameleonForConditionalGenera
             [1152, 384]
         ]
 
-    def _init_vit(self, vit_root="ckpts/SigLIP"):
+    def _init_vit(self, vit_root="./ckpts/SigLIP"):
         self.vit = AutoModel.from_pretrained(vit_root).vision_model
 
     def _init_proj(self):

@@ -17,7 +17,6 @@ from xllmx.solvers.finetune import FinetuneSolverBase
 
 from transformers import AutoProcessor, AutoModel
 from PIL import Image
-import ipdb
 
 from xllmx.model.tokenizer import Tokenizer
 import xllmx.util as util
@@ -31,7 +30,7 @@ class ItemProcessor(ItemProcessorBase):
     def __init__(self):
         super().__init__()
 
-        vit_root = "/mnt/dolphinfs/ssd_pool/docker/user/hadoop-basecv/jiaoyang/mllm/SigLIP"
+        vit_root = "./ckpts/SigLIP"
         self.vit_processor = AutoProcessor.from_pretrained(vit_root)
 
         # AnyRes configuration
@@ -174,7 +173,7 @@ class Solver(FinetuneSolverBase):
 
         pretrained_name = {
              # "7B": "Alpha-VLLM/Chameleon_7B_mGPT",
-            "7B": "/mnt/dolphinfs/ssd_pool/docker/user/hadoop-basecv/jiaoyang/mllm/Lumina-mGPT/Lumina-mGPT-7B-512",
+            "7B": "./ckpts/Lumina-mGPT-7B-512",
             "34B": "Alpha-VLLM/Chameleon_34B_mGPT",
         }[self.args.model_size]
 

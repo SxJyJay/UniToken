@@ -1,7 +1,6 @@
 import os
 import sys
 import glob
-import ipdb
 import json
 
 sys.path.append(os.path.abspath(__file__).rsplit("/", 2)[0])
@@ -154,7 +153,6 @@ def inference_t2i(args, prompts, save_root):
 
     for i, prompt in enumerate(prompts):
         prefix = '_'.join(args.pretrained_path.split('/')[-2:])
-        # import ipdb; ipdb.set_trace()
         # if os.path.exists(f"{save_root}/{prefix}_{prompt}.jpg"):
         #     continue
 

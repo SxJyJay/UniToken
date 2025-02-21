@@ -68,8 +68,7 @@ class FlexARItemProcessor(MMConvItemProcessor):
 
     def __init__(
         self,
-        # tokenizer="Alpha-VLLM/Lumina-mGPT-7B-768",
-        tokenizer="/mnt/dolphinfs/ssd_pool/docker/user/hadoop-basecv/jiaoyang/mllm/Lumina-mGPT/Lumina-mGPT-7B-768",
+        tokenizer="OceanJay/UniToken-AnyRes-StageII",
         conv_template=Conversation,
         target_size=512,
     ):
@@ -93,14 +92,13 @@ class FlexARItemProcessor(MMConvItemProcessor):
         #  todo
         #  currently still use the original image tokenizer provided by Meta rather than transformers
         #  because the transformers implementation does not contain the vae decoder
-        proj_root = "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-basecv/jiaoyang/jiaoyang/Lumina-mGPT/lumina_mgpt"
         self.chameleon_ori_vocab = chameleon_vae_ori.VocabInfo(
-            json.load(open(f"{proj_root}/ckpts/chameleon/tokenizer/text_tokenizer.json", encoding="utf8"))["model"]["vocab"]
+            json.load(open(f"./ckpts/chameleon/tokenizer/text_tokenizer.json", encoding="utf8"))["model"]["vocab"]
         )
         self.chameleon_ori_translation = chameleon_vae_ori.VocabTranslation(self.chameleon_ori_vocab, device="cuda")
         self.chameleon_ori_image_tokenizer = chameleon_vae_ori.ImageTokenizer(
-            cfg_path=f"{proj_root}/ckpts/chameleon/tokenizer/vqgan.yaml",
-            ckpt_path=f"{proj_root}/ckpts/chameleon/tokenizer/vqgan.ckpt",
+            cfg_path=f"./ckpts/chameleon/tokenizer/vqgan.yaml",
+            ckpt_path=f"./ckpts/chameleon/tokenizer/vqgan.ckpt",
             device="cuda",
         )
 

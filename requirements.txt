@@ -7,7 +7,7 @@ fairscale
 sentencepiece
 gradio==4.19.0
 packaging
-transformers>=4.43.3
+transformers==4.43.3
 pyyaml
 pathlib
 Ninja

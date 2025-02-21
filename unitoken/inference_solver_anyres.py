@@ -210,7 +210,6 @@ class MultiModalLogitsProcessor(LogitsProcessor):
         self.num_image_end_tokens = (input_ids[0] == self.image_end_token_id).sum()
 
         # print(self.num_image_start_tokens, self.num_image_end_tokens)
-        # import ipdb; ipdb.set_trace()
 
         if self.num_image_start_tokens == self.num_image_end_tokens:
             self.h_latent_dim, self.w_latent_dim = None, None
@@ -225,7 +224,6 @@ class MultiModalLogitsProcessor(LogitsProcessor):
 
             new_token_num = len(input_ids[0][self.image_start_token_id_index + 1 :])
             # print(f"num new tokens: {new_token_num}")
-            # import ipdb; ipdb.set_trace()
             ## Temporary Solution for Gaurantee Image Generation Success Rate
             if new_token_num < 2:   # Resolution Token Generation, Designated as 8820 (for 512x512 output resolution)
                 resolution_constrained_scores = torch.full_like(scores, -math.inf)
@@ -345,7 +343,7 @@ class FlexARInferenceSolverAnyRes:
         self.anyres_cfg.update(**image_grid_pinpoints)
         self.anyres_cfg.update(**image_aspect_ratio)
         # Init vit processor
-        vit_root = "/mnt/dolphinfs/ssd_pool/docker/user/hadoop-basecv/jiaoyang/mllm/SigLIP"
+        vit_root = "./ckpts/SigLIP"
         self.vit_processor = AutoProcessor.from_pretrained(vit_root)
         ## Do not use a new initialized vit, directly using the saved one in pretrained ckpt
         # # Init vit encoder 
@@ -418,7 +416,6 @@ class FlexARInferenceSolverAnyRes:
                 # generation_result = self.model.generate(
                 #     prompt, generation_config, logits_processor=logits_processor, streamer=streamer
                 # )
-                # import ipdb; ipdb.set_trace()
                 if len(generation_result) > 0 and generation_result[-1] == 8710:
                     generation_result = generation_result[:-1]
             
@@ -555,7 +552,6 @@ class FlexARInferenceSolverAnyRes:
                 
                 # Generation results do not include input ids when passing inputs_embeds instead of input_ids
                 # See lib 'transformers/generation/utils.py' L3029 for detailed logics
-                # import ipdb; ipdb.set_trace()
                 generation_result = self.model.generate(
                     inputs_embeds=uni_tokens.unsqueeze(0), generation_config=generation_config, logits_processor=logits_processor, streamer=streamer
                 )[0].tolist()
