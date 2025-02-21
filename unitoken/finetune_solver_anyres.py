@@ -71,13 +71,6 @@ class ItemProcessor(ItemProcessorBase):
             return (tokens, image_tensor, (0,0)), labels
         try:
             image_path = data_item['raw_image'][0]
-            # Substitute SA1B data save prefix
-            sa1b_root = "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vision-data/mvr/common/SA-1B/images"
-            new_sa1b_root = "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-basecv/qiuhaibo/workspace/data/SA1B_100k"
-            if sa1b_root in image_path:
-                image_path = image_path.replace(
-                    sa1b_root, new_sa1b_root
-                )
             image = Image.open(image_path).convert("RGB")
             image_tensor = process_images([image], self.vit_processor.image_processor, self.anyres_cfg)[0]
         except:

@@ -10,7 +10,7 @@ from torch import nn
 from transformers import AutoProcessor, AutoModel
 
 import sys
-sys.path.append("/mnt/dolphinfs/hdd_pool/docker/user/hadoop-basecv/jiaoyang/jiaoyang/Lumina-mGPT/lumina_mgpt")
+sys.path.append(os.path.abspath(__file__).rsplit("/", 2)[0])
 from tools import get_anyres_image_grid_shape
 
 from .chameleon import ChameleonForConditionalGeneration
