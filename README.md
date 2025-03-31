@@ -134,7 +134,8 @@ a1 = generated[0]
 | UniToken-AnyRes-StageI | [OceanJay/UniToken-AnyRes-StageI](https://huggingface.co/OceanJay/UniToken-AnyRes-StageI) |
 | UniToken-AnyRes-StageII  | [OceanJay/UniToken-AnyRes-StageII](https://huggingface.co/OceanJay/UniToken-AnyRes-StageII)     |
 
-
+## 📚 Datasets
+We've observed that existing text-to-image generation models struggle with short text prompts in benchmarks such as GenEval and T2I-Compbench++. To address this issue, we have revised these prompts to be more descriptive. We are excited to share our enhanced version on [Hugging Face](https://huggingface.co/datasets/OceanJay/rewrite_geneval_t2icompbench). We encourage you to try it out and see the improvements for your own model!
 
 ## 🙏 Acknowledgement
 
