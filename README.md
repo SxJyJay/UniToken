@@ -15,7 +15,7 @@
 <sup>2</sup>Shanghai Collaborative Innovation Center on Intelligent Visual Computing &nbsp; </br>
 <sup>3</sup>Meituan 
 
-[![UniToken](https://img.shields.io/badge/Paper-UniToken-d32f2f.svg?logo=arXiv)](assets/Technical_Report.pdf)&#160;
+[![UniToken](https://img.shields.io/badge/Paper-UniToken-d32f2f.svg?logo=arXiv)](https://arxiv.org/abs/2504.04423)&#160;
 <a href='https://huggingface.co/OceanJay/UniToken-AnyRes-StageII'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face%20-models-blue'></a><br>
 
 </div>
