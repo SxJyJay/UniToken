@@ -23,9 +23,9 @@
 <img src="assets/demo.png">
 
 ## 📣 News
-- **[2025-04-02] 🎉🎉🎉 UniToken [paper](assets/Technical_Report.pdf) is accepted to CVPR 2025 workshop! 🎉🎉🎉**
+- **[2025-04-02] 🎉🎉🎉 UniToken [paper](https://arxiv.org/abs/2504.04423) is accepted to CVPR 2025 workshop! 🎉🎉🎉**
 - **[2025-04-01] 🎉🎉🎉 We release the [recaptioned text prompts](https://huggingface.co/datasets/OceanJay/rewrite_geneval_t2icompbench) of GenEval and T2I-Compbench! 🎉🎉🎉**
-- **[2025-02-16] 🎉🎉🎉 UniToken [paper](assets/Technical_Report.pdf) and training codes are released! 🎉🎉🎉**
+- **[2025-02-16] 🎉🎉🎉 UniToken [paper](https://arxiv.org/abs/2504.04423) and training codes are released! 🎉🎉🎉**
 
 ## 🛠️ Installation
 
