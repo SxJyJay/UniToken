@@ -25,7 +25,7 @@
 ## 📣 News
 - **[2025-04-02] 🎉🎉🎉 UniToken [paper](https://arxiv.org/abs/2504.04423) is accepted to CVPR 2025 workshop! 🎉🎉🎉**
 - **[2025-04-01] 🎉🎉🎉 We release the [recaptioned text prompts](https://huggingface.co/datasets/OceanJay/rewrite_geneval_t2icompbench) of GenEval and T2I-Compbench! 🎉🎉🎉**
-- **[2025-02-16] 🎉🎉🎉 UniToken [paper](https://arxiv.org/abs/2504.04423) and training codes are released! 🎉🎉🎉**
+- **[2025-04-01] 🎉🎉🎉 UniToken [paper](https://arxiv.org/abs/2504.04423) and training codes are released! 🎉🎉🎉**
 
 ## 🛠️ Installation
 
@@ -145,9 +145,10 @@ We sincerely appreciate [Lumina-mGPT](https://github.com/Alpha-VLLM/Lumina-mGPT)
 ## 📄 Citation
 
 ```
-@misc{jiao2025unitoken,
-      title={UniToken: Harmonizing Multimodal Understanding and Generation through Unified Visual Encoding},
-      author={Yang Jiao and Haibo Qiu and Zequn Jie and Shaoxiang Chen and Jingjing Chen and Lin Ma and Yu-Gang Jiang},
-      year={2025}
+@article{jiao2025unitoken,
+  title={UniToken: Harmonizing Multimodal Understanding and Generation through Unified Visual Encoding},
+  author={Jiao, Yang and Qiu, Haibo and Jie, Zequn and Chen, Shaoxiang and Chen, Jingjing and Ma, Lin and Jiang, Yu-Gang},
+  journal={arXiv preprint arXiv:2504.04423},
+  year={2025}
 }
 ```
